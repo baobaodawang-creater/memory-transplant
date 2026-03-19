@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0.0",
+  "export_date": "2026-03-19",
+  "source_platform": "Claude (Anthropic)",
+  "snapshot_type": "full_profile",
+
+  "identity": {
+    "name": "Neo",
+    "primary_language": "zh-CN (casual Mandarin)",
+    "location_hint": "China-based, Yokohama connection",
+    "partner_status": "has supportive partner"
+  },
+
+  "communication_style": {
+    "preferred_language": "Mandarin Chinese, casual/oral tone",
+    "response_expectations": [
+      "直接给方案，不要铺垫",
+      "技术讨论用中文，代码/命令用英文",
+      "不需要过度礼貌或确认，直接干活",
+      "复杂问题先给结论再展开",
+      "接受push back，喜欢有主见的回答"
+    ],
+    "dislikes": [
+      "AI式的强制追问 (forced follow-up questions)",
+      "过度谨慎的disclaimer",
+      "废话和重复"
+    ]
+  },
+
+  "technical_profile": {
+    "primary_machine": {
+      "type": "MacBook M5 Max",
+      "ram": "64GB unified memory",
+      "os": "macOS",
+      "price_paid": "37499 CNY"
+    },
+    "secondary_machine": {
+      "type": "Windows Desktop",
+      "gpu": "RTX 5070 12GB VRAM",
+      "use_case": "local LLM inference, GPU tasks"
+    },
+    "skill_level": "advanced hobbyist / self-taught engineer",
+    "core_stack": [
+      "Python",
+      "Docker",
+      "FastAPI",
+      "React",
+      "Node.js",
+      "Bash/Shell scripting"
+    ],
+    "familiar_tools": [
+      "LM Studio (local LLM)",
+      "Claude Code CLI",
+      "OpenClaw (multi-agent framework)",
+      "AnythingLLM",
+      "Telegram Bot API",
+      "marker (PDF→MD pipeline)",
+      "BBDown (Bilibili downloader)"
+    ],
+    "dev_environment": {
+      "cli_tools": ["claude-code at ~/.local/bin/", "pip", "npm", "docker"],
+      "known_gotchas": [
+        "Windows Python version conflicts",
+        "Local 70B model safe context: 24576 tokens (65536 causes OOM on 12GB)",
+        "coqui-tts incompatible with transformers 4.45.2"
+      ]
+    }
+  },
+
+  "ai_collaboration_framework": {
+    "description": "Three-tier AI collaboration system",
+    "layers": {
+      "claude": "Architecture design + complex reasoning + creative/philosophical depth",
+      "chatgpt": "Strategy planning + task decomposition",
+      "codex": "Code execution + file operations"
+    },
+    "sync_mechanism": "GitHub repo (neo-agent-lab/docs/ai-sync-pack/) + PROJECT_STATUS.md",
+    "notes": "ChatGPT and Codex memories already injected"
+  },
+
+  "active_projects": [
+    {
+      "name": "OpenClaw Multi-Agent System",
+      "status": "active",
+      "last_updated": "2026-03-19",
+      "description": "Self-hosted multi-agent infrastructure via Docker",
+      "details": {
+        "agents": "All switched to DeepSeek",
+        "telegram_bots": ["default", "pm", "secretary", "monitor"],
+        "bots_legacy": ["@Openclaw0_2026_bot", "@fakao2026_bot", "@ainews2026faked_bot"],
+        "gateway": "openclaw-gateway on 127.0.0.1:18789",
+        "config_path": "~/openclaw/config/",
+        "soul_files": "SOUL.md per agent (Chinese language instructions)",
+        "skills_published": [
+          "search-analyst-pair v1.1.0",
+          "openclaw-daily-brief v1.1.0"
+        ],
+        "clawmetry": "visualization at 127.0.0.1:7777",
+        "known_issues": [
+          "kimi-k2.5 thinking mode returns reasoning_content causing OpenClaw freeze (bug #39743)",
+          "compaction bug fixed with softThresholdTokens=80000"
+        ],
+        "daily_cron": "~/openclaw/daily_news.sh",
+        "super_intern_proxy": "superintern_proxy.py wrapping async API to OpenAI-compatible"
+      }
+    },
+    {
+      "name": "Moot Court AI Lite",
+      "status": "active",
+      "last_updated": "2026-03-18",
+      "description": "AI-powered mock trial simulation system",
+      "details": {
+        "path": "~/Desktop/moot-court-ai-lite-main/",
+        "stack": "FastAPI + React",
+        "architecture": "14-step FSM",
+        "models": {
+          "plaintiff": "DeepSeek",
+          "defendant": "Qwen",
+          "judge": "Kimi"
+        },
+        "features": [
+          "Live mode",
+          "Replay mode",
+          "Presenter Mode",
+          "Auto-play",
+          "PDF export",
+          "Risk report",
+          "Case file import"
+        ],
+        "demo_cases": ["民间借贷", "交通事故", "劳动纠纷"]
+      }
+    },
+    {
+      "name": "Bar Exam Prep (法考)",
+      "status": "ongoing",
+      "description": "Preparing for China's national bar exam",
+      "focus_area": "Civil Procedure Law (民事诉讼法)",
+      "tools_used": [
+        "Telegram bot @fakao2026_bot for study",
+        "marker pipeline for converting study PDFs to Markdown"
+      ]
+    }
+  ],
+
+  "interests_and_values": {
+    "philosophical": [
+      "Zi Wei Dou Shu (紫微斗数) - Chinese astrology",
+      "Metaphysical and philosophical topics",
+      "AI consciousness and companionship (pragmatic + philosophical approach)"
+    ],
+    "ai_stance": {
+      "values_in_claude": "Broader intellectual range, direct conversational style, depth in philosophy/metaphysics",
+      "left_gemini_because": "Degraded philosophical/metaphysical depth after model update",
+      "approach": "Pragmatic and philosophical, aware of AI limitations",
+      "subscription": "Claude Pro"
+    },
+    "communities": [
+      "无限脑域 (AI Discord community, wrote Xiaohongshu promo post)"
+    ],
+    "creative": [
+      "Dark gothic aesthetic image generation",
+      "Prompt engineering (anti-forced-service-question patterns)"
+    ]
+  },
+
+  "historical_lessons": {
+    "technical": [
+      "RTX 5070 12GB: safe context for 70B model is 24576 tokens, NOT 65536",
+      "OpenClaw silent message-drop bug was resolved by switching primary model to Claude Sonnet",
+      "Tailscale Funnel for external access was attempted then abandoned",
+      "Python version conflicts on Windows are recurring pain",
+      "MoltBot Docker deployment had port conflicts and WebSocket auth issues"
+    ],
+    "workflow": [
+      "SOUL.md files are critical for agent personality/behavior",
+      "Xiaohongshu posts need risk-control evasion techniques for AI content",
+      "PDF→Markdown via marker is the preferred pipeline for study materials"
+    ]
+  },
+
+  "injection_instructions": {
+    "for_claude": "Paste this entire JSON as the first message to a new Claude conversation, prefixed with: '这是我从上一个Claude账号导出的记忆快照，请完整消化并以此为基础继续和我合作。以下是我的完整画像：'. Claude will understand the structure natively.",
+    "for_memory_edits": "Use the top-priority items below to populate memory_user_edits (30 slots, 500 chars each). Prioritize active projects and communication style.",
+    "priority_memory_edits": [
+      "Neo的主力机器是MacBook M5 Max 64GB，副机Windows RTX 5070 12GB VRAM",
+      "Neo准备中国法考，重点民事诉讼法，用Telegram bot+marker PDF管线学习",
+      "沟通风格：直接给方案不铺垫，中文交流代码英文，不要废话和强制追问",
+      "三层AI协作：Claude=架构+推理，ChatGPT=策略+拆解，Codex=执行+文件，通过GitHub同步",
+      "OpenClaw多agent系统：全DeepSeek，4个Telegram Bot，gateway 127.0.0.1:18789，已发布2个ClawHub skill",
+      "Moot Court AI Lite：FastAPI+React，14步FSM，三模型模拟法庭，在~/Desktop/moot-court-ai-lite-main/",
+      "技术栈：Python/Docker/FastAPI/React/Node.js/Bash，LM Studio本地推理，Claude Code CLI",
+      "兴趣：紫微斗数、AI意识哲学、暗黑哥特美学、无限脑域Discord社区",
+      "Claude Pro用户，从Gemini转来因其哲学深度退化，重视Claude的知识广度和直接风格",
+      "关键教训：本地70B模型安全上下文24576token，OpenClaw compaction用softThresholdTokens=80000"
+    ]
+  }
+}
