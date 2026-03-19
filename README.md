@@ -146,6 +146,8 @@ npm run build
 
 MIT
 
+> **Disclaimer:** This is an independent open-source project, not affiliated with or endorsed by Anthropic. "Claude" is a trademark of Anthropic, PBC.
+
 ---
 
 **你的记忆属于你，不属于任何一个平台。**
